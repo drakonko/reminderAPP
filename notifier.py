@@ -16,14 +16,12 @@ from reminder_core import (
 
 logger = setup_logging("notifier")
 
-
 def format_currency(amount):
     try:
         locale.setlocale(locale.LC_ALL, "")
         return locale.currency(amount, grouping=True)
     except Exception:
         return f"${float(amount):.2f}"
-
 
 def send_native_notification(title, message):
     try:
@@ -76,28 +74,54 @@ class ReminderPopup:
     def open_sheet(self):
         webbrowser.open(SPREADSHEET_URL)
 
+def get_due_recurring(supabase, today=None):
+    """Return only recurring reminders due today."""
+    all_due = get_due_reminders(supabase, today)
+    recurring = [d for d in (all_due or []) if not d.get("reminder_date")]
+    return recurring
+
+def get_due_one_time(supabase, today=None):
+    """Return only one-time reminders due today."""
+    all_due = get_due_reminders(supabase, today)
+    one_time = [d for d in (all_due or []) if d.get("reminder_date")]
+    return one_time
 
 def show_due_popups(supabase):
     today = date.today()
     due_recurring = get_due_recurring(supabase, today)
     due_one_time = get_due_one_time(supabase, today)
-    all_due = due_recurring + due_one_time
+    all_due = (due_recurring or []) + (due_one_time or [])
 
     if not all_due:
         logger.info("No reminders due today.")
         return
 
     # Show native notification with summary
-    names = [d['name'] for d in all_due[:3]]
+    names = [d.get('name') for d in all_due[:3]]
     send_native_notification(f"{len(all_due)} reminders due today", ", ".join(names))
 
     # Tkinter popups
     root = tk.Tk()
     root.withdraw()
-    for item in due_recurring:
+    for item in due_recurring or []:
         win = Toplevel(root)
         ReminderPopup(win, item, supabase, one_time=False)
-    for item in due_one_time:
+    for item in due_one_time or []:
         win = Toplevel(root)
         ReminderPopup(win, item, supabase, one_time=True)
     root.mainloop()
+
+def run_check_only(supabase, only_day_of_month_match=True):
+    """Non-interactive check used by scripts/cron. Returns True if any due reminders found."""
+    due_recurring = get_due_recurring(supabase)
+    due_one_time = get_due_one_time(supabase)
+    found = bool((due_recurring and len(due_recurring) > 0) or (due_one_time and len(due_one_time) > 0))
+    if found:
+        logger.info("Found %d due reminders (recurring=%d, one_time=%d)",
+                    (len(due_recurring or [] ) + len(due_one_time or [])),
+                    len(due_recurring or []), len(due_one_time or []))
+    return found
+
+def run_interactive(supabase, only_day_of_month_match=True):
+    """Interactive run - show popups to the user."""
+    show_due_popups(supabase)
