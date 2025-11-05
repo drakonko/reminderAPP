@@ -1,0 +1,141 @@
+2025-10-16 11:10:46,015 [INFO] HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=id&limit=1 "HTTP/2 200 OK"
+2025-10-16 11:10:46,183 [INFO] HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A&day_of_month=eq.16 "HTTP/2 200 OK"
+2025-10-16 11:10:46,189 [INFO] No recurring cash payments are due today.
+2025-10-20 10:47:34,346 [INFO] HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=id&limit=1 "HTTP/2 200 OK"
+2025-10-20 10:47:34,503 [INFO] HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A&day_of_month=eq.20 "HTTP/2 200 OK"
+2025-10-20 10:47:34,511 [INFO] No recurring cash payments are due today.
+2025-10-20 11:09:14,250 [INFO] HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=id&limit=1 "HTTP/2 200 OK"
+2025-10-20 11:09:14,350 [INFO] HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A&day_of_month=eq.20 "HTTP/2 200 OK"
+2025-10-20 11:09:14,363 [INFO] No recurring cash payments are due today.
+2025-10-20 12:04:31,355 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=id&limit=1 "HTTP/2 200 OK"
+2025-10-20 12:04:39,192 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A&day_of_month=eq.20 "HTTP/2 200 OK"
+2025-10-20 12:04:39,316 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/one_time_reminders?select=%2A&reminder_date=lte.2025-10-20&is_completed=eq.False "HTTP/2 400 Bad Request"
+2025-10-20 12:04:39,320 [ERROR] reminder_core: Failed to fetch one-time reminders: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "one_time_reminders.reminder_time".', 'message': 'column one_time_reminders.reminder_date does not exist'}
+Traceback (most recent call last):
+  File "D:\Joreto\REMINDER APP\reminder_core.py", line 176, in get_due_one_time_reminders
+    .execute()
+     ~~~~~~~^^
+  File "C:\Users\TYRION\AppData\Local\Programs\Python\Python313\Lib\site-packages\postgrest\_sync\request_builder.py", line 78, in execute
+    raise APIError(r.json())
+postgrest.exceptions.APIError: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "one_time_reminders.reminder_time".', 'message': 'column one_time_reminders.reminder_date does not exist'}
+2025-10-20 12:04:39,345 [INFO] notifier: No reminders due today.
+2025-10-20 12:15:45,598 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A&day_of_month=eq.20 "HTTP/2 200 OK"
+2025-10-20 12:15:45,719 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/one_time_reminders?select=%2A&reminder_date=lte.2025-10-20&is_completed=eq.False "HTTP/2 400 Bad Request"
+2025-10-20 12:15:45,746 [ERROR] reminder_core: Failed to fetch one-time reminders: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "one_time_reminders.reminder_time".', 'message': 'column one_time_reminders.reminder_date does not exist'}
+Traceback (most recent call last):
+  File "D:\Joreto\REMINDER APP\reminder_core.py", line 176, in get_due_one_time_reminders
+    .execute()
+     ~~~~~~~^^
+  File "C:\Users\TYRION\AppData\Local\Programs\Python\Python313\Lib\site-packages\postgrest\_sync\request_builder.py", line 78, in execute
+    raise APIError(r.json())
+postgrest.exceptions.APIError: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "one_time_reminders.reminder_time".', 'message': 'column one_time_reminders.reminder_date does not exist'}
+2025-10-20 12:15:45,751 [INFO] notifier: No reminders due today.
+2025-10-20 12:42:12,003 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=id&limit=1 "HTTP/2 200 OK"
+2025-10-20 12:42:12,136 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A "HTTP/2 200 OK"
+2025-10-20 12:42:12,229 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/one_time_reminders?select=%2A&reminder_date=lte.2025-10-20&is_completed=eq.False "HTTP/2 200 OK"
+2025-10-20 13:14:49,635 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=id&limit=1 "HTTP/2 200 OK"
+2025-10-20 13:14:49,818 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A "HTTP/2 200 OK"
+2025-10-20 13:15:52,401 [INFO] httpx: HTTP Request: POST https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/one_time_reminders "HTTP/2 400 Bad Request"
+2025-10-20 13:15:52,404 [ERROR] reminder_core: Failed to add one-time reminder: Fitness
+Traceback (most recent call last):
+  File "D:\Joreto\REMINDER APP\reminder_core.py", line 164, in add_one_time_reminder
+    supabase.table("one_time_reminders").insert(data).execute()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\TYRION\AppData\Local\Programs\Python\Python313\Lib\site-packages\postgrest\_sync\request_builder.py", line 78, in execute
+    raise APIError(r.json())
+postgrest.exceptions.APIError: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'amount' column of 'one_time_reminders' in the schema cache"}
+2025-10-20 13:17:01,045 [INFO] httpx: HTTP Request: POST https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/one_time_reminders "HTTP/2 400 Bad Request"
+2025-10-20 13:17:01,063 [ERROR] reminder_core: Failed to add one-time reminder: Fitness
+Traceback (most recent call last):
+  File "D:\Joreto\REMINDER APP\reminder_core.py", line 164, in add_one_time_reminder
+    supabase.table("one_time_reminders").insert(data).execute()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\TYRION\AppData\Local\Programs\Python\Python313\Lib\site-packages\postgrest\_sync\request_builder.py", line 78, in execute
+    raise APIError(r.json())
+postgrest.exceptions.APIError: {'code': 'PGRST204', 'details': None, 'hint': None, 'message': "Could not find the 'name' column of 'one_time_reminders' in the schema cache"}
+2025-10-20 13:18:51,889 [INFO] httpx: HTTP Request: POST https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/one_time_reminders "HTTP/2 401 Unauthorized"
+2025-10-20 13:18:51,895 [ERROR] reminder_core: Failed to add one-time reminder: Fitness
+Traceback (most recent call last):
+  File "D:\Joreto\REMINDER APP\reminder_core.py", line 164, in add_one_time_reminder
+    supabase.table("one_time_reminders").insert(data).execute()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\TYRION\AppData\Local\Programs\Python\Python313\Lib\site-packages\postgrest\_sync\request_builder.py", line 78, in execute
+    raise APIError(r.json())
+postgrest.exceptions.APIError: {'code': '42501', 'details': None, 'hint': None, 'message': 'new row violates row-level security policy for table "one_time_reminders"'}
+2025-10-20 13:20:05,770 [INFO] httpx: HTTP Request: POST https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/one_time_reminders "HTTP/2 201 Created"
+2025-10-20 13:20:07,708 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A "HTTP/2 200 OK"
+2025-10-20 13:20:12,292 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A "HTTP/2 200 OK"
+2025-10-20 13:20:23,035 [INFO] httpx: HTTP Request: GET https://iedqpymddbkymxyzrejc.supabase.co/rest/v1/recurring_payments?select=%2A "HTTP/2 200 OK"
+2025-11-05 16:10:22,409 [ERROR] reminder_core: Failed to initialize Supabase client.
+Traceback (most recent call last):
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    raise exc
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_sync\connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_backends\sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\WORK\PROJECTS\REMINDER APP\reminder_core.py", line 26, in init_supabase
+    _ = client.table("recurring_payments").select("id").limit(1).execute()
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\postgrest\_sync\request_builder.py", line 47, in execute
+    r = self.request.send()
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\postgrest\base_request_builder.py", line 81, in send
+    return self.session.request(
+           ~~~~~~~~~~~~~~~~~~~~^
+        self.http_method,
+        ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        auth=self.auth,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Gogo\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed

@@ -1,0 +1,3 @@
+ private const val SUPABASE_URL = "https://iedqpymddbkymxyzrejc.supabase.co"
+private const val SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImllZHFweW1kZGJreW14eXpyZWpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAzMTY5MzYsImV4cCI6MjA3NTg5MjkzNn0.yTLpeSMo8__AW8Ez_RMRWzK14-qx00oRIR45hQl2o3k"
+

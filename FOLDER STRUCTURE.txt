@@ -1,0 +1,9 @@
+reminder_app/
+│
+├── main.py                 ← starts the app (GUI + reminder engine)
+├── reminder_core.py        ← logic, Supabase & data model
+├── notifier.py             ← notifications & popup UI
+├── crud.py                 ← optional CLI check/debug
+├── config.py               ← shared settings & logging setup
+├── requirements.txt
+└── icon.ico
