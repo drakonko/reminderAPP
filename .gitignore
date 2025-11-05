@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# PyInstaller
+*.spec
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# macOS/Windows
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+reminder_log.txt
+app_log.txt
+
+# Environment and secrets
+.env
+.env.*
+secrets.json
+
+# Databases
+*.sqlite3
+*.db
+
+# Test / cache
+.pytest_cache/
+
+# Other
+*.pyc
