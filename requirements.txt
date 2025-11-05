@@ -1,0 +1,5 @@
+# Requirements for Reminder App
+# tkinter is part of the Python standard library; not listed here
+python-dotenv
+supabase
+plyer
